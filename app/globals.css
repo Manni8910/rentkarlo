@@ -1,0 +1,115 @@
+:root {
+  --navy: #073b73;
+  --green: #079b65;
+  --green-dark: #057b50;
+  --green-light: #eaf8f2;
+  --text: #10243e;
+  --muted: #65758b;
+  --white: #ffffff;
+  --border: #dbe7e2;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7fbf9;
+  color: var(--text);
+}
+
+.onboarding {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, #e8f3ff, transparent 35%),
+    radial-gradient(circle at bottom right, #e3f8ef, transparent 38%),
+    #f7fbf9;
+}
+
+.onboardingCard {
+  width: min(100%, 480px);
+  min-height: 660px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(7, 59, 115, 0.12);
+}
+
+.brandLogo {
+  width: 210px;
+  max-width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.primaryButton {
+  width: 100%;
+  min-height: 54px;
+  margin-top: auto;
+  border: 0;
+  border-radius: 16px;
+  color: white;
+  background: linear-gradient(135deg, var(--navy), var(--green));
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(7, 59, 115, 0.22);
+}
+
+.primaryButton:hover {
+  background: linear-gradient(135deg, #052f5d, var(--green-dark));
+}
+
+.primaryButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.textButton {
+  margin-top: 12px;
+  border: 0;
+  color: var(--navy);
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.roleCard {
+  padding: 20px;
+  display: grid;
+  gap: 7px;
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  color: var(--text);
+  background: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.roleCard:hover {
+  border-color: var(--green);
+}
+
+.roleCard.selected {
+  border-color: var(--green);
+  background: var(--green-light);
+}
+
+.progress span {
+  width: 8px;
+  height: 8px;
+  background: #ccd9d4;
+  border-radius: 999px;
+}
+
+.progress span.active {
+  width: 26px;
+  background: linear-gradient(90deg, var(--navy), var(--green));
+}
