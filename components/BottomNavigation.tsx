@@ -1,0 +1,2 @@
+import { Icon } from "./Icons";
+export function BottomNavigation({ savedCount }: { savedCount: number }) { return <nav className="bottomNav" aria-label="Mobile navigation"><a href="#home"><Icon name="home" /><span>Home</span></a><a href="#listings"><Icon name="search" /><span>Explore</span></a><a href="#listings"><span className="navIconWrap"><Icon name="heart" />{savedCount > 0 && <b>{savedCount}</b>}</span><span>Saved</span></a><a href="#post-property"><Icon name="building" /><span>List</span></a></nav>; }
